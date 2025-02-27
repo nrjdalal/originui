@@ -21886,7 +21886,7 @@
       ]
     },
     {
-      "name": "registry-registry-tags",
+      "name": "registry-tags",
       "type": "registry:file",
       "files": [
         {
