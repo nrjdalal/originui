@@ -5,10 +5,7 @@
   "dependencies": [
     "@radix-ui/react-slot",
     "class-variance-authority",
-    "clsx",
-    "lucide-react",
-    "react",
-    "tailwind-merge"
+    "lucide-react"
   ],
   "files": [
     {
@@ -16,12 +13,6 @@
       "target": "components/comp-103.tsx",
       "content": "import { ChevronDownIcon, ChevronUpIcon } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\n\nexport default function Component() {\n  return (\n    <div className=\"inline-flex -space-x-px rounded-full shadow-xs rtl:space-x-reverse\">\n      <Button\n        className=\"rounded-none shadow-none first:rounded-s-full last:rounded-e-full focus-visible:z-10\"\n        size=\"icon\"\n        aria-label=\"Upvote\"\n      >\n        <ChevronUpIcon size={16} aria-hidden=\"true\" />\n      </Button>\n      <span className=\"bg-primary text-primary-foreground flex items-center px-1 text-sm font-medium\">\n        235\n      </span>\n      <Button\n        className=\"rounded-none shadow-none first:rounded-s-full last:rounded-e-full focus-visible:z-10\"\n        size=\"icon\"\n        aria-label=\"Downvote\"\n      >\n        <ChevronDownIcon size={16} aria-hidden=\"true\" />\n      </Button>\n    </div>\n  )\n}\n",
       "path": "registry/default/components/comp-103.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

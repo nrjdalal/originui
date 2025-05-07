@@ -5,10 +5,7 @@
   "dependencies": [
     "@radix-ui/react-slot",
     "class-variance-authority",
-    "clsx",
-    "lucide-react",
-    "react",
-    "tailwind-merge"
+    "lucide-react"
   ],
   "files": [
     {
@@ -16,12 +13,6 @@
       "target": "components/comp-115.tsx",
       "content": "import { ChevronLeftIcon } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\n\nexport default function Component() {\n  return (\n    <Button className=\"relative ps-12\">\n      Previous\n      <span className=\"bg-primary-foreground/15 pointer-events-none absolute inset-y-0 start-0 flex w-9 items-center justify-center\">\n        <ChevronLeftIcon className=\"opacity-60\" size={16} aria-hidden=\"true\" />\n      </span>\n    </Button>\n  )\n}\n",
       "path": "registry/default/components/comp-115.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

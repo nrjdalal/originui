@@ -4,10 +4,7 @@
   "type": "registry:component",
   "dependencies": [
     "@radix-ui/react-label",
-    "clsx",
-    "lucide-react",
-    "react",
-    "tailwind-merge"
+    "lucide-react"
   ],
   "files": [
     {
@@ -15,12 +12,6 @@
       "target": "components/comp-09.tsx",
       "content": "import { useId } from \"react\"\nimport { AtSignIcon } from \"lucide-react\"\n\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\n\nexport default function Component() {\n  const id = useId()\n  return (\n    <div className=\"*:not-first:mt-2\">\n      <Label htmlFor={id}>Input with start icon</Label>\n      <div className=\"relative\">\n        <Input id={id} className=\"peer ps-9\" placeholder=\"Email\" type=\"email\" />\n        <div className=\"text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50\">\n          <AtSignIcon size={16} aria-hidden=\"true\" />\n        </div>\n      </div>\n    </div>\n  )\n}\n",
       "path": "registry/default/components/comp-09.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

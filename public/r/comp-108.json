@@ -5,10 +5,7 @@
   "dependencies": [
     "@radix-ui/react-slot",
     "class-variance-authority",
-    "clsx",
-    "lucide-react",
-    "react",
-    "tailwind-merge"
+    "lucide-react"
   ],
   "files": [
     {
@@ -16,12 +13,6 @@
       "target": "components/comp-108.tsx",
       "content": "import { EllipsisIcon, FilesIcon, FilmIcon } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\n\nexport default function Component() {\n  return (\n    <div className=\"inline-flex -space-x-px rounded-md shadow-xs rtl:space-x-reverse\">\n      <Button\n        className=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n        variant=\"outline\"\n      >\n        <FilesIcon className=\"-ms-1 opacity-60\" size={16} aria-hidden=\"true\" />\n        Files\n      </Button>\n      <Button\n        className=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n        variant=\"outline\"\n      >\n        <FilmIcon className=\"-ms-1 opacity-60\" size={16} aria-hidden=\"true\" />\n        Media\n      </Button>\n      <Button\n        className=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n        variant=\"outline\"\n        size=\"icon\"\n        aria-label=\"Menu\"\n      >\n        <EllipsisIcon size={16} aria-hidden=\"true\" />\n      </Button>\n    </div>\n  )\n}\n",
       "path": "registry/default/components/comp-108.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

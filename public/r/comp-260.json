@@ -7,10 +7,7 @@
     "@radix-ui/react-slider",
     "@radix-ui/react-slot",
     "@radix-ui/react-tooltip",
-    "class-variance-authority",
-    "clsx",
-    "react",
-    "tailwind-merge"
+    "class-variance-authority"
   ],
   "files": [
     {
@@ -18,12 +15,6 @@
       "target": "components/comp-260.tsx",
       "content": "\"use client\"\n\nimport { useState } from \"react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport { Label } from \"@/components/ui/label\"\nimport { Slider } from \"@/components/ui/slider\"\n\nexport default function Component() {\n  const min_price = 5\n  const max_price = 1240\n  const [value, setValue] = useState([min_price, max_price])\n\n  const formatPrice = (price: number) => {\n    return price === max_price\n      ? `$${price.toLocaleString()}+`\n      : `$${price.toLocaleString()}`\n  }\n\n  return (\n    <div className=\"*:not-first:mt-3\">\n      <Label className=\"tabular-nums\">\n        From {formatPrice(value[0])} to {formatPrice(value[1])}\n      </Label>\n      <div className=\"flex items-center gap-4\">\n        <Slider\n          value={value}\n          onValueChange={setValue}\n          min={min_price}\n          max={max_price}\n          aria-label=\"Price range slider\"\n        />\n        <Button variant=\"outline\">Go</Button>\n      </div>\n    </div>\n  )\n}\n",
       "path": "registry/default/components/comp-260.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

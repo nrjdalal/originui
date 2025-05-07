@@ -4,10 +4,7 @@
   "type": "registry:component",
   "dependencies": [
     "@radix-ui/react-slot",
-    "class-variance-authority",
-    "clsx",
-    "react",
-    "tailwind-merge"
+    "class-variance-authority"
   ],
   "files": [
     {
@@ -15,12 +12,6 @@
       "target": "components/comp-420.tsx",
       "content": "import { Badge } from \"@/components/ui/badge\"\n\nexport default function Component() {\n  return (\n    <Badge variant=\"outline\" className=\"gap-1.5\">\n      <span\n        className=\"size-1.5 rounded-full bg-emerald-500\"\n        aria-hidden=\"true\"\n      ></span>\n      Badge\n    </Badge>\n  )\n}\n",
       "path": "registry/default/components/comp-420.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

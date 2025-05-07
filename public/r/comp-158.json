@@ -3,10 +3,7 @@
   "name": "comp-158",
   "type": "registry:component",
   "dependencies": [
-    "@radix-ui/react-radio-group",
-    "clsx",
-    "react",
-    "tailwind-merge"
+    "@radix-ui/react-radio-group"
   ],
   "files": [
     {
@@ -14,12 +11,6 @@
       "target": "components/comp-158.tsx",
       "content": "import { RadioGroup, RadioGroupItem } from \"@/components/ui/radio-group\"\n\nexport default function Component() {\n  return (\n    <fieldset className=\"space-y-4\">\n      <legend className=\"text-foreground text-sm leading-none font-medium\">\n        Choose a color\n      </legend>\n      <RadioGroup className=\"flex gap-1.5\" defaultValue=\"blue\">\n        <RadioGroupItem\n          value=\"blue\"\n          aria-label=\"Blue\"\n          className=\"size-6 border-blue-500 bg-blue-500 shadow-none data-[state=checked]:border-blue-500 data-[state=checked]:bg-blue-500\"\n        />\n        <RadioGroupItem\n          value=\"indigo\"\n          aria-label=\"Indigo\"\n          className=\"size-6 border-indigo-500 bg-indigo-500 shadow-none data-[state=checked]:border-indigo-500 data-[state=checked]:bg-indigo-500\"\n        />\n        <RadioGroupItem\n          value=\"pink\"\n          aria-label=\"Pink\"\n          className=\"size-6 border-pink-500 bg-pink-500 shadow-none data-[state=checked]:border-pink-500 data-[state=checked]:bg-pink-500\"\n        />\n        <RadioGroupItem\n          value=\"red\"\n          aria-label=\"red\"\n          className=\"size-6 border-red-500 bg-red-500 shadow-none data-[state=checked]:border-red-500 data-[state=checked]:bg-red-500\"\n        />\n        <RadioGroupItem\n          value=\"orange\"\n          aria-label=\"orange\"\n          className=\"size-6 border-orange-500 bg-orange-500 shadow-none data-[state=checked]:border-orange-500 data-[state=checked]:bg-orange-500\"\n        />\n        <RadioGroupItem\n          value=\"amber\"\n          aria-label=\"amber\"\n          className=\"size-6 border-amber-500 bg-amber-500 shadow-none data-[state=checked]:border-amber-500 data-[state=checked]:bg-amber-500\"\n        />\n        <RadioGroupItem\n          value=\"emerald\"\n          aria-label=\"emerald\"\n          className=\"size-6 border-emerald-500 bg-emerald-500 shadow-none data-[state=checked]:border-emerald-500 data-[state=checked]:bg-emerald-500\"\n        />\n      </RadioGroup>\n    </fieldset>\n  )\n}\n",
       "path": "registry/default/components/comp-158.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

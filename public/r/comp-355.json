@@ -5,10 +5,7 @@
   "dependencies": [
     "@radix-ui/react-slot",
     "@radix-ui/react-tooltip",
-    "class-variance-authority",
-    "clsx",
-    "react",
-    "tailwind-merge"
+    "class-variance-authority"
   ],
   "files": [
     {
@@ -16,12 +13,6 @@
       "target": "components/comp-355.tsx",
       "content": "import { Button } from \"@/components/ui/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\"\n\nexport default function Component() {\n  return (\n    <TooltipProvider delayDuration={0}>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button variant=\"outline\" size=\"sm\">\n            Dark\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className=\"dark px-2 py-1 text-xs\">\n          This tooltip will be always dark\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  )\n}\n",
       "path": "registry/default/components/comp-355.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

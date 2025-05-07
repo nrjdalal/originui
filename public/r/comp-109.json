@@ -5,10 +5,7 @@
   "dependencies": [
     "@radix-ui/react-toggle",
     "@radix-ui/react-toggle-group",
-    "class-variance-authority",
-    "clsx",
-    "react",
-    "tailwind-merge"
+    "class-variance-authority"
   ],
   "files": [
     {
@@ -16,12 +13,6 @@
       "target": "components/comp-109.tsx",
       "content": "import {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@/components/ui/toggle-group\"\n\nexport default function Component() {\n  return (\n    <ToggleGroup variant=\"outline\" className=\"inline-flex\" type=\"single\">\n      <ToggleGroupItem value=\"left\">Left</ToggleGroupItem>\n      <ToggleGroupItem value=\"center\">Center</ToggleGroupItem>\n      <ToggleGroupItem value=\"right\">Right</ToggleGroupItem>\n    </ToggleGroup>\n  )\n}\n",
       "path": "registry/default/components/comp-109.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

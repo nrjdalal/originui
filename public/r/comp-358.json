@@ -6,10 +6,7 @@
     "@radix-ui/react-slot",
     "@radix-ui/react-tooltip",
     "class-variance-authority",
-    "clsx",
-    "lucide-react",
-    "react",
-    "tailwind-merge"
+    "lucide-react"
   ],
   "files": [
     {
@@ -17,12 +14,6 @@
       "target": "components/comp-358.tsx",
       "content": "import { GlobeIcon } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\"\n\nexport default function Component() {\n  return (\n    <TooltipProvider delayDuration={0}>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button variant=\"outline\" size=\"sm\">\n            W/ icon\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent className=\"dark py-3\">\n          <div className=\"flex gap-3\">\n            <GlobeIcon\n              className=\"mt-0.5 shrink-0 opacity-60\"\n              size={16}\n              aria-hidden=\"true\"\n            />\n            <div className=\"space-y-1\">\n              <p className=\"text-[13px] font-medium\">\n                Tooltip with title and icon\n              </p>\n              <p className=\"text-muted-foreground text-xs\">\n                Tooltips are made to be highly customizable, with features like\n                dynamic placement, rich content, and a robust API.\n              </p>\n            </div>\n          </div>\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  )\n}\n",
       "path": "registry/default/components/comp-358.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

@@ -4,10 +4,7 @@
   "type": "registry:component",
   "dependencies": [
     "@radix-ui/react-slot",
-    "class-variance-authority",
-    "clsx",
-    "react",
-    "tailwind-merge"
+    "class-variance-authority"
   ],
   "files": [
     {
@@ -15,12 +12,6 @@
       "target": "components/comp-410.tsx",
       "content": "import { Button } from \"@/components/ui/button\"\n\nexport default function Component() {\n  return (\n    <div className=\"bg-muted flex items-center rounded-full p-0.5\">\n      <div className=\"flex -space-x-3\">\n        <img\n          className=\"ring-muted rounded-full ring-2\"\n          src=\"/avatar-80-03.jpg\"\n          width={40}\n          height={40}\n          alt=\"Avatar 01\"\n        />\n        <img\n          className=\"ring-muted rounded-full ring-2\"\n          src=\"/avatar-80-04.jpg\"\n          width={40}\n          height={40}\n          alt=\"Avatar 02\"\n        />\n        <img\n          className=\"ring-muted rounded-full ring-2\"\n          src=\"/avatar-80-05.jpg\"\n          width={40}\n          height={40}\n          alt=\"Avatar 03\"\n        />\n        <img\n          className=\"ring-muted rounded-full ring-2\"\n          src=\"/avatar-80-06.jpg\"\n          width={40}\n          height={40}\n          alt=\"Avatar 04\"\n        />\n      </div>\n      <Button\n        variant=\"secondary\"\n        className=\"text-muted-foreground hover:text-foreground flex items-center justify-center rounded-full bg-transparent px-3 text-xs shadow-none hover:bg-transparent\"\n      >\n        +3\n      </Button>\n    </div>\n  )\n}\n",
       "path": "registry/default/components/comp-410.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

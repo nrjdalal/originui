@@ -3,10 +3,7 @@
   "name": "comp-396",
   "type": "registry:component",
   "dependencies": [
-    "@radix-ui/react-avatar",
-    "clsx",
-    "react",
-    "tailwind-merge"
+    "@radix-ui/react-avatar"
   ],
   "files": [
     {
@@ -14,12 +11,6 @@
       "target": "components/comp-396.tsx",
       "content": "import {\n  Avatar,\n  AvatarFallback,\n  AvatarImage,\n} from \"@/components/ui/avatar\"\n\nexport default function Component() {\n  return (\n    <div className=\"relative\">\n      <Avatar className=\"rounded-md\">\n        <AvatarImage src=\"./avatar-80-07.jpg\" alt=\"Kelly King\" />\n        <AvatarFallback>KK</AvatarFallback>\n      </Avatar>\n      <span className=\"border-background absolute -end-1 -top-1 size-3 rounded-full border-2 bg-emerald-500\">\n        <span className=\"sr-only\">Online</span>\n      </span>\n    </div>\n  )\n}\n",
       "path": "registry/default/components/comp-396.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

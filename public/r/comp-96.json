@@ -5,10 +5,7 @@
   "dependencies": [
     "@radix-ui/react-slot",
     "class-variance-authority",
-    "clsx",
-    "lucide-react",
-    "react",
-    "tailwind-merge"
+    "lucide-react"
   ],
   "files": [
     {
@@ -16,12 +13,6 @@
       "target": "components/comp-96.tsx",
       "content": "import { PlusIcon } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\n\nexport default function Component() {\n  return (\n    <Button variant=\"outline\" className=\"aspect-square max-sm:p-0\">\n      <PlusIcon className=\"opacity-60 sm:-ms-1\" size={16} aria-hidden=\"true\" />\n      <span className=\"max-sm:sr-only\">Add new</span>\n    </Button>\n  )\n}\n",
       "path": "registry/default/components/comp-96.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

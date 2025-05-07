@@ -5,10 +5,7 @@
   "dependencies": [
     "@radix-ui/react-slot",
     "class-variance-authority",
-    "clsx",
-    "lucide-react",
-    "react",
-    "tailwind-merge"
+    "lucide-react"
   ],
   "files": [
     {
@@ -16,12 +13,6 @@
       "target": "components/comp-113.tsx",
       "content": "import { ChevronDownIcon, PinIcon } from \"lucide-react\"\n\nimport { Button } from \"@/components/ui/button\"\n\nexport default function Component() {\n  return (\n    <div className=\"divide-primary-foreground/30 inline-flex divide-x rounded-md shadow-xs rtl:space-x-reverse\">\n      <Button\n        className=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\"\n        size=\"icon\"\n        aria-label=\"Options\"\n      >\n        <ChevronDownIcon size={16} aria-hidden=\"true\" />\n      </Button>\n      <Button className=\"rounded-none shadow-none first:rounded-s-md last:rounded-e-md focus-visible:z-10\">\n        <PinIcon className=\"-ms-1 opacity-60\" size={16} aria-hidden=\"true\" />\n        Pinned\n      </Button>\n    </div>\n  )\n}\n",
       "path": "registry/default/components/comp-113.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

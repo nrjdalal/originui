@@ -6,10 +6,7 @@
     "@radix-ui/react-slot",
     "@radix-ui/react-toast",
     "class-variance-authority",
-    "clsx",
-    "lucide-react",
-    "react",
-    "tailwind-merge"
+    "lucide-react"
   ],
   "files": [
     {
@@ -17,12 +14,6 @@
       "target": "components/comp-297.tsx",
       "content": "\"use client\"\n\nimport { useToast } from \"@/hooks/use-toast\"\nimport { Button } from \"@/components/ui/button\"\nimport { ToastAction } from \"@/components/ui/toast\"\n\nexport default function Component() {\n  const { toast } = useToast()\n\n  return (\n    <Button\n      variant=\"outline\"\n      onClick={() => {\n        toast({\n          title: \"We couldn't complete your request!\",\n          description: \"There was a problem with your request.\",\n          action: <ToastAction altText=\"Try again\">Try again</ToastAction>,\n        })\n      }}\n    >\n      Show toast\n    </Button>\n  )\n}\n",
       "path": "registry/default/components/comp-297.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:hook",

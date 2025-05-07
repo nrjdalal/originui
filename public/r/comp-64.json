@@ -3,10 +3,7 @@
   "name": "comp-64",
   "type": "registry:component",
   "dependencies": [
-    "@radix-ui/react-label",
-    "clsx",
-    "react",
-    "tailwind-merge"
+    "@radix-ui/react-label"
   ],
   "files": [
     {
@@ -14,12 +11,6 @@
       "target": "components/comp-64.tsx",
       "content": "import { useId } from \"react\"\n\nimport { Label } from \"@/components/ui/label\"\nimport { Textarea } from \"@/components/ui/textarea\"\n\nexport default function Component() {\n  const id = useId()\n  return (\n    <div className=\"*:not-first:mt-2\">\n      <Label htmlFor={id}>Textarea with error</Label>\n      <Textarea\n        id={id}\n        placeholder=\"Leave a comment\"\n        defaultValue=\"Hello!\"\n        aria-invalid\n      />\n      <p\n        className=\"text-destructive mt-2 text-xs\"\n        role=\"alert\"\n        aria-live=\"polite\"\n      >\n        Message should be at least 10 characters\n      </p>\n    </div>\n  )\n}\n",
       "path": "registry/default/components/comp-64.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

@@ -5,10 +5,7 @@
   "dependencies": [
     "@radix-ui/react-slot",
     "class-variance-authority",
-    "clsx",
-    "lucide-react",
-    "react",
-    "tailwind-merge"
+    "lucide-react"
   ],
   "files": [
     {
@@ -16,12 +13,6 @@
       "target": "components/comp-419.tsx",
       "content": "import { CheckIcon } from \"lucide-react\"\n\nimport { Badge } from \"@/components/ui/badge\"\n\nexport default function Component() {\n  return (\n    <Badge variant=\"outline\" className=\"gap-1\">\n      <CheckIcon className=\"text-emerald-500\" size={12} aria-hidden=\"true\" />\n      Badge\n    </Badge>\n  )\n}\n",
       "path": "registry/default/components/comp-419.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

@@ -4,10 +4,7 @@
   "type": "registry:component",
   "dependencies": [
     "@radix-ui/react-label",
-    "clsx",
-    "lucide-react",
-    "react",
-    "tailwind-merge"
+    "lucide-react"
   ],
   "files": [
     {
@@ -15,12 +12,6 @@
       "target": "components/comp-199.tsx",
       "content": "import { useId } from \"react\"\n\nimport { Label } from \"@/components/ui/label\"\nimport { SelectNative } from \"@/components/ui/select-native\"\n\nexport default function Component() {\n  const id = useId()\n  return (\n    <div className=\"*:not-first:mt-2\">\n      <Label htmlFor={id}>Select with option groups (native)</Label>\n      <SelectNative id={id}>\n        <optgroup label=\"Frontend\">\n          <option value=\"1\">React</option>\n          <option value=\"2\">Vue</option>\n          <option value=\"3\">Angular</option>\n        </optgroup>\n        <optgroup label=\"Backend\">\n          <option value=\"4\">Node.js</option>\n          <option value=\"5\">Python</option>\n          <option value=\"6\">Java</option>\n        </optgroup>\n      </SelectNative>\n    </div>\n  )\n}\n",
       "path": "registry/default/components/comp-199.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

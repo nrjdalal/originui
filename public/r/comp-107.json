@@ -6,10 +6,7 @@
     "@radix-ui/react-toggle",
     "@radix-ui/react-toggle-group",
     "class-variance-authority",
-    "clsx",
-    "lucide-react",
-    "react",
-    "tailwind-merge"
+    "lucide-react"
   ],
   "files": [
     {
@@ -17,12 +14,6 @@
       "target": "components/comp-107.tsx",
       "content": "\"use client\"\n\nimport { useState } from \"react\"\nimport {\n  AlignCenterIcon,\n  AlignJustifyIcon,\n  AlignLeftIcon,\n  AlignRightIcon,\n} from \"lucide-react\"\n\nimport {\n  ToggleGroup,\n  ToggleGroupItem,\n} from \"@/components/ui/toggle-group\"\n\nexport default function Component() {\n  const [value, setValue] = useState<string>(\"center\")\n\n  return (\n    <ToggleGroup\n      className=\"divide-background inline-flex divide-x\"\n      type=\"single\"\n      value={value}\n      onValueChange={(value) => {\n        if (value) setValue(value)\n      }}\n    >\n      <ToggleGroupItem\n        className=\"bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground\"\n        aria-label=\"Align Left\"\n        value=\"left\"\n      >\n        <AlignLeftIcon size={16} aria-hidden=\"true\" />\n      </ToggleGroupItem>\n      <ToggleGroupItem\n        className=\"bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground\"\n        aria-label=\"Align Center\"\n        value=\"center\"\n      >\n        <AlignCenterIcon size={16} aria-hidden=\"true\" />\n      </ToggleGroupItem>\n      <ToggleGroupItem\n        className=\"bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground\"\n        aria-label=\"Align Right\"\n        value=\"right\"\n      >\n        <AlignRightIcon size={16} aria-hidden=\"true\" />\n      </ToggleGroupItem>\n      <ToggleGroupItem\n        className=\"bg-primary/80 text-primary-foreground hover:bg-primary hover:text-primary-foreground data-[state=on]:bg-primary data-[state=on]:text-primary-foreground\"\n        aria-label=\"Align Justify\"\n        value=\"justify\"\n      >\n        <AlignJustifyIcon size={16} aria-hidden=\"true\" />\n      </ToggleGroupItem>\n    </ToggleGroup>\n  )\n}\n",
       "path": "registry/default/components/comp-107.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

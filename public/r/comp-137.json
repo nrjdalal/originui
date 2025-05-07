@@ -4,10 +4,7 @@
   "type": "registry:component",
   "dependencies": [
     "@radix-ui/react-checkbox",
-    "@radix-ui/react-label",
-    "clsx",
-    "react",
-    "tailwind-merge"
+    "@radix-ui/react-label"
   ],
   "files": [
     {
@@ -15,12 +12,6 @@
       "target": "components/comp-137.tsx",
       "content": "import { useId } from \"react\"\n\nimport { Checkbox } from \"@/components/ui/checkbox\"\nimport { Label } from \"@/components/ui/label\"\n\nexport default function Component() {\n  const id = useId()\n  return (\n    <div className=\"flex items-center gap-2\">\n      <Checkbox\n        style={\n          {\n            \"--primary\": \"var(--color-emerald-500)\",\n          } as React.CSSProperties\n        }\n        id={id}\n        className=\"rounded-full\"\n        defaultChecked\n      />\n      <Label\n        htmlFor={id}\n        className=\"peer-data-[state=checked]:line-throgh after:bg-muted-foreground peer-data-[state=checked]:text-muted-foreground relative after:absolute after:top-1/2 after:left-0 after:h-px after:w-full after:origin-bottom after:-translate-y-1/2 after:scale-x-0 after:transition-transform after:ease-in-out peer-data-[state=checked]:after:origin-bottom peer-data-[state=checked]:after:scale-x-100\"\n      >\n        Fancy todo item\n      </Label>\n    </div>\n  )\n}\n",
       "path": "registry/default/components/comp-137.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",

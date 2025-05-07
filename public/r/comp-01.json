@@ -3,10 +3,7 @@
   "name": "comp-01",
   "type": "registry:component",
   "dependencies": [
-    "@radix-ui/react-label",
-    "clsx",
-    "react",
-    "tailwind-merge"
+    "@radix-ui/react-label"
   ],
   "files": [
     {
@@ -14,12 +11,6 @@
       "target": "components/comp-01.tsx",
       "content": "import { useId } from \"react\"\n\nimport { Input } from \"@/components/ui/input\"\nimport { Label } from \"@/components/ui/label\"\n\nexport default function Component() {\n  const id = useId()\n  return (\n    <div className=\"*:not-first:mt-2\">\n      <Label htmlFor={id}>Simple input</Label>\n      <Input id={id} placeholder=\"Email\" type=\"email\" />\n    </div>\n  )\n}\n",
       "path": "registry/default/components/comp-01.tsx"
-    },
-    {
-      "type": "registry:lib",
-      "target": "lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
-      "path": "registry/default/lib/utils.ts"
     },
     {
       "type": "registry:ui",
